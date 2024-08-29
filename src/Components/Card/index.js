@@ -5,7 +5,7 @@ import { GlobalStyle } from '../../PageStyle/globalStyles';
 const CARD = styled.div`
   height: calc(8rem + 12vw);
   width: calc(9rem + 12vw);
-  background-color: var(--nav2);
+  background-color: #06D001;
   border-radius: 20px;
   position: relative;
   margin-top: calc(5rem + 5vw);
@@ -40,9 +40,9 @@ const TEXT = styled.h4`
 `;
 
 const NAME = styled.h3`
-  color: var(--pink);
+  color: orange;
   padding-top: 1rem;
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.7rem + 1.25vw);
 `;
 
 const Card = ({ name, text, image }) => {

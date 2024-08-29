@@ -51,7 +51,7 @@ const Register = () => {
   return (
     <>
       <section className="login-content">
-        <Row className="m-0 align-items-center bg-white vh-100">
+        <Row className="m-0 align-items-center bg-cyan-500 vh-100">
           <div className="col-md-6 d-md-block d-none bg-white p-0 mt-n1 vh-100 overflow-hidden">
             <Image src={auth1} className="Image-fluid gradient-main animated-scaleX blur-sm" alt="images" />
           </div>

@@ -60,7 +60,7 @@ function Dashboard() {
     <Container>
       <HeroSection />
       <About />
-      <Services />
+      {/* <Services /> */}
       <Testimonials />
       <Contact />
     </Container>

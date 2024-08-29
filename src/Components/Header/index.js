@@ -1,18 +1,21 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Assets/logo.svg";
 
 import { GlobalStyle } from '../../PageStyle/globalStyles';
+
+const orangeColor = "#FFA500"
 
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
-  color: var(--white);
+  background-color: #FFA503;
+  color: #FFA503;
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -58,7 +61,7 @@ const Nav = styled.nav`
     }
     &:not(:last-child):hover::after {
       width: 100%;
-      background: var(--purple);
+      background: #FFAF30;
     }
     /* &:not(:last-child) {
       margin-right: 2rem;
@@ -72,7 +75,7 @@ const Nav = styled.nav`
 `;
 
 const Button = styled.button`
-  background-color: var(--purple);
+  background-color: #0000B3;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   color: var(--white);
@@ -81,8 +84,8 @@ const Button = styled.button`
   transition: all 0.2s;
   &:hover {
   
-    color: var(--purple);
-    background-color: var(--white);
+    color: #0000B3;
+    background-color: #08CF20;
     transition:0.6s;
   }
   &:focus {
@@ -164,6 +167,7 @@ const MobileMenu = styled.nav`
 `;
 const Header = () => {
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
   //const handleClick = () => setClick(!click);
   const ref = useRef(null);
 
@@ -249,11 +253,11 @@ const Header = () => {
         <a href="#about" onClick={(e) => scrollUp("about", e)}>
           About Us
         </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
-          Services
+        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+          Contact Us
         </a>
-        <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
+        <a href="" onClick={(e) => handleClick("contact", e)}>
+          <Button onClick={navigate('/Login')}>Login / Register</Button>
         </a>
       </Nav>
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)}>
@@ -266,11 +270,8 @@ const Header = () => {
         <a href="#about" onClick={(e) => handleClick("about", e)}>
           About Us
         </a>
-        <a href="#services" onClick={(e) => handleClick("services", e)}>
-          Services
-        </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+          Contact Us
         </a>
       </MobileMenu>
     </Headers>

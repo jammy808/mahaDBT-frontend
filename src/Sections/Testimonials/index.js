@@ -33,7 +33,7 @@ const Title = styled.h1`
     bottom: 0;
     transform: translate(-50%, 0.5rem);
     /* or 100px */
-    border-bottom: 2px solid var(--purple);
+    border-bottom: 2px solid #FFA505;
   }
 `;
 
