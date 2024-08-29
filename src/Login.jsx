@@ -4,6 +4,12 @@ import { Row, Col, Image, Form, Button, ListGroup, } from 'react-bootstrap'
 import Card from './Assets/Card';
 import auth1 from './Assets/loginpage.jpg'
 
+import "./PageStyle/hope-ui.scss"
+import "./PageStyle/custom.scss"
+import "./PageStyle/dark.scss"
+import "./PageStyle/rtl.scss"
+import "./PageStyle/customizer.scss"
+
 const Login = () => {
   // Define state for form inputs
   const [username, setUsername] = useState('');

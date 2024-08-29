@@ -3,6 +3,11 @@ import { Link,  useNavigate } from 'react-router-dom';
 import { Row, Col, Image, Form, Button, ListGroup, } from 'react-bootstrap'
 import Card from './Assets/Card';
 import auth1 from './Assets/registerpage.jpg'
+import "./PageStyle/hope-ui.scss"
+import "./PageStyle/custom.scss"
+import "./PageStyle/dark.scss"
+import "./PageStyle/rtl.scss"
+import "./PageStyle/customizer.scss"
 
 const Register = () => {
   // Define state for form inputs
