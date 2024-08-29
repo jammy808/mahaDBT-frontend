@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react';
+import Chat from './Chat';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Button, Row, Col, Nav, Collapse, Navbar, Container } from 'react-bootstrap'
@@ -21,6 +22,7 @@ SwiperCore.use([Navigation]);
 function Dashboard() {
 
   const [user, setUser] = useState(null);
+  const msg = []
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
