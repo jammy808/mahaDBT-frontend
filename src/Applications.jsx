@@ -35,7 +35,7 @@ function Applications() {
   useEffect(() => {
     if (scholarship) {
       if (scholarship.status === 'pending') {
-        setProgress(-1);
+        setProgress(1);
       }
       else if (scholarship.status === 'verified') {
         setProgress(2);
