@@ -20,6 +20,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import SchoolIcon from '@mui/icons-material/School';
 import { useNavigate } from 'react-router-dom';
 import {Flat, Heat, Nested} from '@alptugidin/react-circular-progress-bar'
 import StudentProfileProgress from './CircularProgressBar';
@@ -76,9 +77,9 @@ const Layout = () => {
           </Typography>
         </ListItemText>
       </ListItem>
-      <Divider sx={{ backgroundColor: 'black' }} />
 
-            <StudentProfileProgress></StudentProfileProgress>
+      <StudentProfileProgress></StudentProfileProgress>
+      <Divider sx={{ backgroundColor: 'white' , height:'2px' , marginTop: "0px" , marginBottom: "10px"}} />
 
       <ListItem disablePadding>
         <ListItemButton
@@ -96,6 +97,47 @@ const Layout = () => {
           <ListItemText primary="Profile" />
         </ListItemButton>
       </ListItem>
+
+
+      <Divider sx={{ backgroundColor: 'white' , height:'2px' , marginTop: "10px" , marginBottom: "10px"}} />
+
+      <ListItem disablePadding>
+        <ListItemButton
+          component={NavLink}
+          to="/profile/apply"
+          sx={item}
+          style={({ isActive }) => ({
+            backgroundColor: isActive ? '#133680' : '',
+            color: isActive ? 'white' : 'white',
+          })}
+        >
+          <ListItemIcon sx={{ color: 'inherit' }}>
+            <SchoolIcon />
+          </ListItemIcon>
+          <ListItemText primary="Scholarships" />
+        </ListItemButton>
+      </ListItem>
+
+      <Divider sx={{ backgroundColor: 'white' , height:'2px' , marginTop: "10px" , marginBottom: "10px"}} />
+
+      <ListItem disablePadding>
+        <ListItemButton
+          component={NavLink}
+          to="/profile/status"
+          sx={item}
+          style={({ isActive }) => ({
+            backgroundColor: isActive ? '#133680' : '',
+            color: isActive ? 'white' : 'white',
+          })}
+        >
+          <ListItemIcon sx={{ color: 'inherit' }}>
+            <SchoolIcon />
+          </ListItemIcon>
+          <ListItemText primary="Applications" />
+        </ListItemButton>
+      </ListItem>
+
+
 
 
       {/* Add more navigation items here */}
@@ -134,7 +176,8 @@ const Layout = () => {
           '& .MuiDrawer-paper': {
             width: 240,
             boxSizing: 'border-box',
-            backgroundColor: 'black',
+            backgroundColor: '#090429',
+
             padding: '16px',
           },
         }}

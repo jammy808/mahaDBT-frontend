@@ -208,6 +208,7 @@ const HeroSection = () => {
           <CTA>
             Apply Now &nbsp;
             <i className="material-icons">turn_right</i>
+
           </CTA>
         </Lb>
 

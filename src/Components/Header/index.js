@@ -219,7 +219,6 @@ const Header = () => {
         borderRadius: "0 0 50px 50px",
 
         border: "2px solid #faf8ff",
-
         duration: 1,
         ease: "power1.out",
 
@@ -274,7 +273,7 @@ const Header = () => {
         <a href="" onClick={(e) => handleClick("contact", e)}>
         {user ? (
          // If user is not null, go to profile section
-         <Button onClick={() => navigate('/profile')}>Profile</Button>
+         <Button onClick={() => navigate('/profile/dash')}>Profile</Button>
 
        ) : (
          // If user is null, go to login

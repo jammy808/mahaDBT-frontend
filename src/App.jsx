@@ -8,6 +8,8 @@ import Form from './Form';
 
 import Layout from './Layout'
 import ProfileDash from './ProfileDash';
+import Scholarships from './Scholarships';
+import Applications from './Applications';
 
 // import "./Assets/scss/hope-ui.scss"
 // import "./Assets/scss/custom.scss"
@@ -28,7 +30,8 @@ function App() {
 
         <Route path="/profile" element={<Layout />}>
           <Route path="dash" element={<ProfileDash />} />
-          
+          <Route path="apply" element={<Scholarships />} />
+          <Route path="status" element={<Applications />} />
           {/* Add more routes here */}
         </Route>
       </Routes>
