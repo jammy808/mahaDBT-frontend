@@ -60,8 +60,8 @@ const Title = styled.h1`
 const CurvedLine = styled.div`
   width: 7rem;
   height: 2rem;
-  border: solid 5px var(--purple);
-  border-color: var(--purple) transparent transparent transparent;
+  border: solid 5px #003ebb;
+  border-color: #003ebb transparent transparent transparent;
   border-radius: 150%/60px 70px 0 0;
 `;
 
@@ -123,10 +123,10 @@ const About = () => {
   return (
     <AboutSection id="about">
       <GlobalStyle/>
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" />
       <Hand>
         <img src={hand} alt="" />
-      </Hand>
+      </Hand> */}
       <Main>
         <div>
           <Title>About PMSSS</Title>
@@ -145,9 +145,9 @@ const About = () => {
               The Prime Minister's Special Scholarship Scheme (PMSSS) is a flagship program aimed at providing financial assistance to students from underprivileged backgrounds to pursue higher education. Our mission is to empower students to achieve their academic goals and become leaders in their chosen fields.
             </Text>
             <div>
-              <Circle style={{ backgroundColor: "var(--purple)" }} />
-              <Circle style={{ backgroundColor: "var(--pink)" }} />
-              <Circle style={{ backgroundColor: "var(--black)" }} />
+              <Circle style={{ backgroundColor: "#003ebb" }} />
+              <Circle style={{ backgroundColor: "#008b69" }} />
+              <Circle style={{ backgroundColor: "#474554" }} />
             </div>
           </AboutText>
         </Content>

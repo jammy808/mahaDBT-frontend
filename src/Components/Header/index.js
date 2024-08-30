@@ -15,8 +15,8 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: #FFA503;
-  color: #FFA503;
+  background-image: linear-gradient(155deg, #003ebb, #002fa8);
+  color: #faf8ff;
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -51,7 +51,7 @@ const Nav = styled.nav`
   a {
     font-weight: 600;
     line-height: 1.5;
-    color: var(--white);
+    color: #faf8ff;
     &::after {
       content: "";
       display: block;
@@ -62,7 +62,7 @@ const Nav = styled.nav`
     }
     &:not(:last-child):hover::after {
       width: 100%;
-      background: #FFAF30;
+      background-image: linear-gradient(155deg, #ff7b60, #b22da9);
     }
     /* &:not(:last-child) {
       margin-right: 2rem;
@@ -76,17 +76,17 @@ const Nav = styled.nav`
 `;
 
 const Button = styled.button`
-  background-color: #0000B3;
+  background-image: linear-gradient(155deg, #0099ce, #0064d8);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  color: var(--white);
+  color: #faf8ff;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   &:hover {
   
     color: #0000B3;
-    background-color: #08CF20;
+    background-image: linear-gradient(155deg, #ff7b60, #b22da9);
     transition:0.6s;
   }
   &:focus {
@@ -117,7 +117,7 @@ const HamburgerBtn = styled.button`
   &::before,
   &::after {
     content: "";
-    background-color: var(--white);
+    background-color: #faf8ff;
     width: 2rem;
     height: 2px;
     display: inline-block;
@@ -159,7 +159,7 @@ const MobileMenu = styled.nav`
   border-radius: 20px;
   margin: 0.5rem;
   a {
-    color: var(--white);
+    color: #faf8ff;
     font-weight: 600;
     font-size: 1.5rem;
     margin: 1.5rem;
@@ -218,8 +218,7 @@ const Header = () => {
 
         borderRadius: "0 0 50px 50px",
 
-        border: "2px solid var(--white)",
-
+        border: "2px solid #faf8ff",
         duration: 1,
         ease: "power1.out",
 
@@ -240,7 +239,7 @@ const Header = () => {
 
         borderRadius: "50px",
 
-        border: "3px solid var(--white)",
+        border: "3px solid #faf8ff",
 
         duration: 1,
         ease: "power1.out",
@@ -259,7 +258,7 @@ const Header = () => {
     <Headers ref={ref}>
       <Logo>
         <img src={logo} alt="Scholarship" />
-        <h3>Scholarship</h3>
+        <h3 style={{color: "#faf8ff"}}>Scholarship</h3>
       </Logo>
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>

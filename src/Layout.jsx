@@ -98,6 +98,7 @@ const Layout = () => {
         </ListItemButton>
       </ListItem>
 
+
       <Divider sx={{ backgroundColor: 'white' , height:'2px' , marginTop: "10px" , marginBottom: "10px"}} />
 
       <ListItem disablePadding>
@@ -138,6 +139,7 @@ const Layout = () => {
 
 
 
+
       {/* Add more navigation items here */}
     </List>
   );
@@ -175,6 +177,7 @@ const Layout = () => {
             width: 240,
             boxSizing: 'border-box',
             backgroundColor: '#090429',
+
             padding: '16px',
           },
         }}

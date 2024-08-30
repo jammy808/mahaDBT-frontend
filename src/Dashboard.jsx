@@ -6,7 +6,8 @@ import HeroSection from "./Sections/Hero/index";
 import About from "./Sections/About/index";
 import Services from "./Sections/Services/index";
 import Testimonials from "./Sections/Testimonials/index";
-import Contact from "./Sections/Contact/index";
+import Contact from "./Sections/Contact/index"
+import Chat from "./Chat.jsx"
 import styled from "styled-components";
 
 import { GlobalStyle } from './PageStyle/globalStyles';
@@ -53,19 +54,19 @@ function Dashboard() {
 
   return (
     <>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
     <Suspense fallback={null}>
-    <GlobalStyle />
-    <ScrollToTop />
-    <Header />
-    <Container>
-      <HeroSection />
-      <About />
-      {/* <Services /> */}
-      <Testimonials />
-      <Contact />
-    </Container>
-    <Footer />
-  </Suspense>
+      <GlobalStyle />
+      <ScrollToTop />
+      <Chat/>
+      <Header />
+      <Container>
+        <HeroSection />
+        <About />
+        {/* <Services /> */}
+        <Contact/>
+      </Container>
+    </Suspense>
   </>
   //   <div>
   //   <h1>Dashboard</h1>

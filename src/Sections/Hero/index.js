@@ -119,8 +119,8 @@ const Topic = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00EC00;
-  color: var(--white);
+  background-image: linear-gradient(155deg, #4dbe9f, #008b69);
+  color: #faf8ff;
   font-weight: 700;
   font-size: calc(0.4rem + 0.4vw);
   padding: 0.5rem 1rem;
@@ -132,7 +132,7 @@ const Circle = styled.span`
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #003FBC;
+  background-image: linear-gradient(155deg, #ff7b60, #b22da9);
   margin-right: 0.5rem;
 `;
 
@@ -143,16 +143,16 @@ const Title = styled.h1`
 `;
 
 const SubText = styled.h5`
-  font-size: calc(0.5rem + 0.5vw);
-  color: #FFA506;
-  margin-top: 2rem;
+  font-size: calc(0.75rem + 0.5vw);
+  margin-top: 1rem;
 `;
 
 const CTA = styled.button`
-  background-color: var(--white);
-  color: #0a0b10;
+  background-color: #faf8ff;
+  border: 2px solid #003ebb;
+  color: #003ebb;
   padding: 0.5rem 1rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   border-radius: 20px;
   cursor: pointer;
   font-size: calc(0.5rem + 0.5vw);
@@ -169,6 +169,9 @@ const CTA = styled.button`
   }
   &:hover {
     transform: scale(1.1);
+    background-image: linear-gradient(155deg, #003ebb, #002fa8);
+    border: 0;
+    color: #faf8ff;
   }
   &:active {
     transform: scale(0.9);
@@ -204,7 +207,8 @@ const HeroSection = () => {
           </SubText>
           <CTA>
             Apply Now &nbsp;
-            <img src={arrow} alt="cta" width="100" height="100" />
+            <i className="material-icons">turn_right</i>
+
           </CTA>
         </Lb>
 

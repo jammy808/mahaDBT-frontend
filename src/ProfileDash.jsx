@@ -10,6 +10,7 @@ import {
   Box,
   Typography,
   FormControlLabel,
+  CircularProgress,
   Checkbox,
 } from "@mui/material";
 import "react-quill/dist/quill.snow.css";
@@ -21,6 +22,7 @@ function Form() {
     marksheet: null,
     userImage: null,
   });
+
 
   // Define Yup validation schema
   const validationSchema = Yup.object({
@@ -91,11 +93,13 @@ function Form() {
       const response = await axios.get('http://localhost:8000/profile', {
         withCredentials: true,
       });
+
       formik.setValues(response.data.user);
     } catch (err) {
       setError(err.response ? err.response.data.message : 'Failed to fetch profile');
     }
   };
+
 
   const handleFileChange = (event) => {
     const { name, files } = event.target;
