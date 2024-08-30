@@ -19,7 +19,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import SettingsIcon from '@mui/icons-material/Settings';
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { useNavigate } from 'react-router-dom';
 import {Flat, Heat, Nested} from '@alptugidin/react-circular-progress-bar'
 import StudentProfileProgress from './CircularProgressBar';
@@ -91,9 +91,9 @@ const Layout = () => {
           })}
         >
           <ListItemIcon sx={{ color: 'inherit' }}>
-            <SettingsIcon />
+            <AccountBoxIcon />
           </ListItemIcon>
-          <ListItemText primary="Settings" />
+          <ListItemText primary="Profile" />
         </ListItemButton>
       </ListItem>
 
