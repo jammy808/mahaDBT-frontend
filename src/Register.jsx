@@ -3,6 +3,11 @@ import { Link,  useNavigate } from 'react-router-dom';
 import { Row, Col, Image, Form, Button, ListGroup, } from 'react-bootstrap'
 import Card from './Assets/Card';
 import auth1 from './Assets/registerpage.jpg'
+import "./PageStyle/hope-ui.scss"
+import "./PageStyle/custom.scss"
+import "./PageStyle/dark.scss"
+import "./PageStyle/rtl.scss"
+import "./PageStyle/customizer.scss"
 
 const Register = () => {
   // Define state for form inputs
@@ -19,7 +24,7 @@ const Register = () => {
 
     try {
       // Make POST request to the server
-      const response = await fetch('http://localhost:8080/studentReg', {
+      const response = await fetch('http://localhost:8000/studentReg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Specify the content type
@@ -46,7 +51,7 @@ const Register = () => {
   return (
     <>
       <section className="login-content">
-        <Row className="m-0 align-items-center bg-white vh-100">
+        <Row className="m-0 align-items-center bg-cyan-500 vh-100">
           <div className="col-md-6 d-md-block d-none bg-white p-0 mt-n1 vh-100 overflow-hidden">
             <Image src={auth1} className="Image-fluid gradient-main animated-scaleX blur-sm" alt="images" />
           </div>
