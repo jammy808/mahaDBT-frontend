@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useState ,useEffect, useRef} from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Assets/logo.svg";
+import axios from 'axios';
 
 import { GlobalStyle } from '../../PageStyle/globalStyles';
 
@@ -168,6 +169,7 @@ const MobileMenu = styled.nav`
 const Header = () => {
   const [click, setClick] = useState(false);
   const navigate = useNavigate();
+  const [user, setUser] = useState("");
   //const handleClick = () => setClick(!click);
   const ref = useRef(null);
 
@@ -188,7 +190,20 @@ const Header = () => {
     scrollUp(id, e);
   };
 
+  const fetchProfile = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/profile', {
+        withCredentials: true,
+      });
+      setUser(response.data.user);
+    } catch (err) {
+      console.log(err.response ? err.response.data.message : 'Failed to fetch profile');
+    }
+  };
+
   useEffect(() => {
+    fetchProfile();
+
     const element = ref.current;
 
     const mq = window.matchMedia("(max-width: 40em)");
@@ -257,7 +272,14 @@ const Header = () => {
           Contact Us
         </a>
         <a href="" onClick={(e) => handleClick("contact", e)}>
-          <Button onClick={navigate('/Login')}>Login / Register</Button>
+        {user ? (
+         // If user is not null, go to profile section
+         <Button onClick={() => navigate('/profile')}>Profile</Button>
+
+       ) : (
+         // If user is null, go to login
+         <Button onClick={() => navigate('/login')}>Login / Register</Button>
+       )}
         </a>
       </Nav>
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)}>

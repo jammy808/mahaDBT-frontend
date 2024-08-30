@@ -34,7 +34,7 @@ function Dashboard() {
   // Function to fetch profile data
   const fetchProfile = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/profile', {
+      const response = await axios.get('http://localhost:8000/profile', {
         withCredentials: true,
       });
       setUser(response.data.user);

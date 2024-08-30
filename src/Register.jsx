@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       // Make POST request to the server
-      const response = await fetch('http://localhost:8080/studentReg', {
+      const response = await fetch('http://localhost:8000/studentReg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Specify the content type

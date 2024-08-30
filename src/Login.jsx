@@ -25,7 +25,7 @@ const Login = () => {
 
     try {
       // Make POST request to the server
-      const response = await fetch('http://localhost:8080/studentLog', {
+      const response = await fetch('http://localhost:8000/studentLog', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Specify the content type
