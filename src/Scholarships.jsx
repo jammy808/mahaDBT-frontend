@@ -77,7 +77,7 @@ function Scholarships() {
         <h4 className='font-medium'>Prime Minister's Special Scholarship Scheme (PMSSS)</h4>
 
         {user ? (
-          !user.scholarshipId || user.scholarshipId !== '' ? (
+          !user.scholarshipId || user.scholarshipId === '' ? (
             <Button
               onClick={handleApplyClick} // Show dialog on apply click
               variant="contained"
