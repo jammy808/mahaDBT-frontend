@@ -77,7 +77,7 @@ function Scholarships() {
         <h4 className='font-medium'>Prime Minister's Special Scholarship Scheme (PMSSS)</h4>
 
         {user ? (
-          user.scholarshipId === '' ? (
+          !user.scholarshipId || user.scholarshipId !== '' ? (
             <Button
               onClick={handleApplyClick} // Show dialog on apply click
               variant="contained"
@@ -106,6 +106,9 @@ function Scholarships() {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Are you and your documents upto date with the latest guidelines ?
+
+            By Clicking yes you agree to all the guidelines will be punished accordingly in a case of forgery.
+            <a href='https://www.aicte-india.org/sites/default/files/pmsss2020/2022-23/Methodology%2022-23.pdf' target='_blank'>Guidelines</a>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

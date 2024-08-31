@@ -14,6 +14,7 @@ const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -39,6 +40,7 @@ const Register = () => {
         setUsername('');
         setEmail('');
         setPassword('');
+        navigate('/');
       } else {
         // Handle error response
         console.error('Error submitting form:', response.statusText);
@@ -70,7 +72,7 @@ const Register = () => {
                       <h4 className="logo-title ms-3">Hope UI</h4>
                     </Link> */}
                     <h2 className="mb-2 text-center">Sign Up</h2>
-                    <p className="text-center">Create your Hope UI account.</p>
+                    <p className="text-center">Create your EduSaathi account.</p>
                     <Form onSubmit={handleSubmit}>
                       <Row>
                         <Col lg="6">

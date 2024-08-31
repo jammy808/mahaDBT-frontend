@@ -70,6 +70,7 @@ function Form() {
       incomeCertificate: null,
       marksheet: null,
       userImage: null,
+      incomeCertificateNo: "",
     },
     validationSchema,
     onSubmit: async (values) => {
@@ -94,7 +95,32 @@ function Form() {
         withCredentials: true,
       });
 
-      formik.setValues(response.data.user);
+      formik.setValues({
+        _id: response.data.user._id,
+        username: response.data.user.username,
+        firstName: response.data.user.personalDetails.firstName,
+        middleName: response.data.user.personalDetails.middleName,
+        lastName: response.data.user.personalDetails.lastName,
+        mobileNo: response.data.user.personalDetails.mobileNo,
+        guardianMobileNo: response.data.user.personalDetails.guardianMobileNo,
+        birthDate: response.data.user.personalDetails.birthDate,
+        address: response.data.user.personalDetails.address,
+        gender: response.data.user.personalDetails.gender,
+        age: response.data.user.personalDetails.age,
+        isIncomeCertificateAvailable: response.data.user.incomeDetails.isIncomeCertificateAvailable,
+        annualIncome: response.data.user.incomeDetails.annualIncome,
+        issuedDate: response.data.user.incomeDetails.issuedDate,
+        totalMarks: response.data.user.educationDetails.totalMarks,
+        percentage: response.data.user.educationDetails.percentage,
+        college: response.data.user.educationDetails.college,
+        course: response.data.user.educationDetails.course,
+        bankAccountNo: response.data.user.bankAccountNo,
+        incomeCertificate: response.data.user.incomeDetails.incomeCertificate,
+        marksheet: response.data.user.educationDetails.marksheet,
+        userImage: response.data.user.personalDetails.userImage,
+        incomeCertificateNo: response.data.user.incomeDetails.incomeCertificateNo,
+      });
+      
     } catch (err) {
       setError(err.response ? err.response.data.message : 'Failed to fetch profile');
     }
@@ -425,6 +451,28 @@ function Form() {
                   error={formik.touched.issuedDate && Boolean(formik.errors.issuedDate)}
                   helperText={formik.touched.issuedDate && formik.errors.issuedDate}
                   InputLabelProps={{ shrink: true }}
+                />
+              </Grid>
+
+              {/* Income Certificate No */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  value={formik.values.incomeCertificateNo}
+                  autoComplete="off"
+                  name="incomeCertificateNo"
+                  type="string"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  label="Income Certificate No"
+                  error={formik.touched.incomeCertificateNo && Boolean(formik.errors.incomeCertificateNo)}
+                  helperText={formik.touched.incomeCertificateNo && formik.errors.incomeCertificateNo}
+                  InputProps={{
+                    sx: {
+                      height: "2.4em",
+                    },
+                  }}
                 />
               </Grid>
 
