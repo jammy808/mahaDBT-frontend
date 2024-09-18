@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState ,useEffect, useRef} from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../Assets/logo.svg";
+import logo from "../../Assets/logo.png";
 import axios from 'axios';
 
 import { GlobalStyle } from '../../PageStyle/globalStyles';
@@ -30,7 +30,7 @@ const Headers = styled.header`
 const Logo = styled.a`
   display: flex;
   align-items: center;
-  width: 2rem;
+  width: 3rem;
   height: auto;
   cursor: pointer;
   img {
@@ -258,7 +258,7 @@ const Header = () => {
     <Headers ref={ref}>
       <Logo>
         <img src={logo} alt="Scholarship" />
-        <h3 style={{color: "#faf8ff"}}>Scholarship</h3>
+        <h3 style={{color: "#faf8ff"}}>EduSaathi</h3>
       </Logo>
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>

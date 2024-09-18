@@ -7,6 +7,7 @@ import purpleBlob from "../../Assets/blob purple.png";
 import whiteBlob from "../../Assets/blob white.png";
 import arrow from "../../Assets/Arrow Right.svg";
 import Mobile from "../../Assets/mobile.svg";
+import { useNavigate } from "react-router-dom";
 
 import { GlobalStyle } from '../../PageStyle/globalStyles';
 
@@ -42,13 +43,13 @@ const Blobs = styled.div`
   }
 `;
 
-const PinkBlob = styled.div`
-  width: calc(15% + 15vw);
-  position: absolute;
-  right: 0;
-  top: calc(5rem + 5vw);
-  z-index: 6;
-`;
+// const PinkBlob = styled.div`
+//   width: calc(15% + 15vw);
+//   position: absolute;
+//   right: 0;
+//   top: calc(5rem + 5vw);
+//   z-index: 6;
+// `;
 const PurpleBlob = styled.div`
   width: calc(10% + 10vw);
   position: absolute;
@@ -179,14 +180,15 @@ const CTA = styled.button`
 `;
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <>
     <HomeSection id="home">
       <GlobalStyle/>
       <Blobs>
-        <PinkBlob>
+        {/* <PinkBlob>
           <img src={pinkBlob} alt="" width="400" height="400" />{" "}
-        </PinkBlob>
+        </PinkBlob> */}
         <WhiteBlob>
           <img src={whiteBlob} alt="" width="400" height="400" />
         </WhiteBlob>
@@ -205,7 +207,7 @@ const HeroSection = () => {
           <SubText>
           "Seize the opportunity with the Prime Minister's Special Scholarship Scheme (PMSSS) and pave the way for a successful future."
           </SubText>
-          <CTA>
+          <CTA onClick={() => navigate('/profile/dash')}>
             Apply Now &nbsp;
             <i className="material-icons">turn_right</i>
 

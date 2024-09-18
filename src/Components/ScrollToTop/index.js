@@ -16,8 +16,8 @@ export const Up = styled.div`
   line-height: 1.5715;
   list-style: none;
   position: fixed;
-  right: 100px;
-  bottom: 80px;
+  right: 140px;
+  bottom: 60px;
   z-index: 10;
   width: 40px;
   height: 40px;

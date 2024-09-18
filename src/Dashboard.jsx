@@ -58,7 +58,6 @@ function Dashboard() {
     <Suspense fallback={null}>
       <GlobalStyle />
       <ScrollToTop />
-      <Chat/>
       <Header />
       <Container>
         <HeroSection />
@@ -66,6 +65,7 @@ function Dashboard() {
         {/* <Services /> */}
         <Contact/>
       </Container>
+        <Chat/>
     </Suspense>
   </>
   //   <div>

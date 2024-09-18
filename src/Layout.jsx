@@ -158,7 +158,7 @@ const Layout = () => {
             {mobileOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
           <Typography variant="h6" noWrap sx={{ color: 'white' }}>
-            Website Name or Something
+            EduSaathi
           </Typography>
         </Toolbar>
       </AppBar>
